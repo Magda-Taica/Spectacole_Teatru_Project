@@ -1,0 +1,50 @@
+﻿@page
+@model Spectacole_Teatru_Project.Pages.Spectacole.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Spectacol</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Spectacol.ID" />
+            <div class="form-group">
+                <label asp-for="Spectacol.Nume_Piesa" class="control-label"></label>
+                <input asp-for="Spectacol.Nume_Piesa" class="form-control" />
+                <span asp-validation-for="Spectacol.Nume_Piesa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spectacol.Autor" class="control-label"></label>
+                <input asp-for="Spectacol.Autor" class="form-control" />
+                <span asp-validation-for="Spectacol.Autor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spectacol.Pret" class="control-label"></label>
+                <input asp-for="Spectacol.Pret" class="form-control" />
+                <span asp-validation-for="Spectacol.Pret" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Spectacol.SpectacolDate" class="control-label"></label>
+                <input asp-for="Spectacol.SpectacolDate" class="form-control" />
+                <span asp-validation-for="Spectacol.SpectacolDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

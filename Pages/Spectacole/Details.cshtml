@@ -1,0 +1,43 @@
+﻿@page
+@model Spectacole_Teatru_Project.Pages.Spectacole.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Spectacol</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Spectacol.Nume_Piesa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Spectacol.Nume_Piesa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Spectacol.Autor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Spectacol.Autor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Spectacol.Pret)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Spectacol.Pret)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Spectacol.SpectacolDate)
+          </dt>
+         <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Spectacol.SpectacolDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Spectacol.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
